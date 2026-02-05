@@ -54,7 +54,7 @@ user_number = 0
 
 while True:
     user_number = int(input("Enter a number between 1 and 9: "))
-    
+    # print("\n----- EXERCISE 1: validate a number between 1 and 9 -----") #############################
     while True:   # You mean this one for exercise one?
         if(user_number > 0 and user_number < 10):
             print("Number you enter is between 1 and 9")
@@ -70,30 +70,25 @@ while True:
         print(f"{user_number} is ODD")
 
     decision_user = input("\nDo you want another run? y or Y for yes | n or N for no: ")
-    if decision_user == 'y' and decision_user == 'Y':
+    if decision_user == 'n' or decision_user == 'N':
         break
-    elif decision_user == 'n' and decision_user == 'N':
-        break
-
-
-print("\n----- EXERCISE 1: validate a number between 1 and 9 -----")
 
 
 print("\n----- EXERCISE 2: guess a number with 3 attempts -----")
 
-# number = 3
-# attempt = 3
-# while True:
-#     print(f"You have {attempt} attempts!\n")
-#     user_input = int(input("Enter a number to guess: "))
-#     if(number == user_input):
-#         print(f"You guess the right number! {number}\n") 
-#         break
-#     elif(number != user_input):
-#         attempt -= 1
-#         print(f"The number you enter '{user_input}' is wrong\n")
-#         if(attempt == 0):
-#             break
+number = 3
+attempt = 3
+while True:
+    print(f"You have {attempt} attempts!\n")
+    user_input = int(input("Enter a number to guess: "))
+    if(number == user_input):
+        print(f"You guess the right number! {number}\n") 
+        break
+    elif(number != user_input):
+        attempt -= 1
+        print(f"The number you enter '{user_input}' is wrong\n")
+        if(attempt == 0):
+            break
 
         
         
