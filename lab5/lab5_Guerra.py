@@ -6,6 +6,7 @@ Lab 5, function
 """
 import math
 from lab5_function_Guerra import *
+from lab5_function_Guerra import generate_random, guessing_match
 
 print("\n----- Example 1: user-defined function -----")
 w = 8
@@ -29,6 +30,27 @@ y2 = collectnum('y2')
 distance = calculate_distance(x1,x2,y1,y2)
 print_distance(x1,x2,y1,y2, distance)
 
-print("\nEXERCISE")
+
+
+
+
+
+print("\n----- EXERCISE 2: -----")
+
+while True:
+    GUESS_NUMBER = int(input("Enter a number between 1 to 10: "))
+
+    MIN_NUM = 1
+    MAX_NUM = 10
+
+    randoms = generate_random(MIN_NUM, MAX_NUM)
+
+    if guessing_match(GUESS_NUMBER, randoms):
+        break 
+
+   
+
+
+
 
 

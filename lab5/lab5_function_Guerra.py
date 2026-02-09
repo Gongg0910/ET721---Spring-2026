@@ -5,6 +5,7 @@ Lab 5, function
 
 """
 import math
+import random
 # example 1
 def area_rectangle(width, length):
     return width*length
@@ -29,10 +30,31 @@ def collectnum(point):
 # function that calculates and returns the distance
 # distance = square_root of ( (x2-x1)^2 + (y2-y1)^2 )
 def calculate_distance(x1, x2, y1, y2):
-    return math.sqrt(math.pow((x2-x1),2) +  math.pow((y2-y1),2))
+    return math.sqrt(math.pow((x2-x1),2) + math.pow((y2-y1),2))
 
 # function to print the result 
 def print_distance(x1,x2,y1,y2, distance):
     print(f"The distance of point ({x1}, {y1}) and ({x2}, {y2}) is {round(distance, 2)}")
 
-# EXERCISE
+
+
+
+
+
+
+
+# EXERCISE 2 #############################
+
+def generate_random(minimun, maximun):
+    return random.randint(minimun, maximun)
+
+def guessing_match(guess, randoms):
+    if randoms < guess:
+        print("The number is smaller than the guess number\n")
+    elif randoms > guess:
+        print("The number is bigger than the guess number\n")
+    else:
+        print("You got it!")
+            
+
+          

@@ -77,4 +77,29 @@ print(f"{contacts}")
 
 
 
+
+
+
+
 print("\n----- EXERCISE 1: -----")
+
+users = [
+    "peterpan@yahoo.com",
+    "annie@hotmail.com",
+    "Carl@hotmail.com",
+    "martha@gmail.com",
+    "cassie@yahoo.com",
+    "Josue@hotmail.com",
+    "John@hotmail.com"
+]
+
+counts = {}
+
+for email in users:
+    domain = email.split('@')[1]
+    if domain in counts:
+        counts[domain] += 1
+    else:
+        counts[domain] = 1
+
+print(f"Email counts: {counts}")
