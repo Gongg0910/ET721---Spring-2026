@@ -86,49 +86,42 @@ print(f"The preimeter of rectangle 2 = {rectangle2.perimter()}")
 # rectangle2.drawRectangle()
 
 
-print("\n ---- Exercise ---- ")
 
 
-class BankAccount(object):
-    def __init__(self, account_number, account_holder, balance):
+
+
+
+print("\n ---- Exercise ---- ") #######################################################
+
+class BankAccount:
+    def __init__(self, account_number, account_holder):
         self.num = account_number
-        self.h = account_holder
-        self.b = balance
+        self.holder = account_holder
+        self.balances = 250.50 
 
-    def deposit(self, adding):
-        self.b += adding
-        return self.b
-    
-    def withdraw(self, subtract):
-        self.b -= subtract
-        return self.b
+    def deposit(self, amount):
+        self.balances += amount
+        return self.balances
+
+    def withdraw(self, amount):
+        if amount <= self.balances:
+            self.balances -= amount
+            return self.balances
+        else:
+            print("Insufficient cash and cannot withdrawal.")
+
+    def balance(self):
+        print(f"Final balance ${self.balances:.2f}")
+
+useraccount = BankAccount(123456789, "Gonzalo Guerra")
+
+useraccount.withdraw(700)  
+useraccount.deposit(1000)  
+useraccount.withdraw(500)   
+useraccount.balance()      
+
         
 
-#     # def add_radius(self, plusradius):
-#     #     self.r += plusradius
-#     #     return self.r 
-
-
-useraccount = BankAccount(123456789, "Gonzalo Guerra", 250)
-
-print(f"Account number {useraccount.num} and the name is {useraccount.h}. and he have {useraccount.b}")
-
-useraccount.deposit(500)
-
-print(f"Account number {useraccount.num} and the name is {useraccount.h}. and he have {useraccount.b} added more")
-
-useraccount.withdraw(700)
-
-print(f"Account number {useraccount.num} and the name is {useraccount.h}. and he have {useraccount.b}  substracted after ")
-        
-
-
-
-# class Triangle(object):
-#     def __init__(self, lengths, angles, area):
-#         self.l   = lengths
-#         self.ang = angles
-#         self.a   = area
 
 
         
