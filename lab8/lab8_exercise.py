@@ -2,8 +2,11 @@ import pandas as pd
 import requests
 import matplotlib.pyplot as plt
 
+# url = "https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/en.1.csv"          which result epl_matches.csv same thing as "https://raw.githubusercontent.com" 
 
-url = "https://raw.githubusercontent.com"
+# or 
+
+url = "https://raw.githubusercontent.com"   
 file_name = "epl_matches.csv"
 
 print("\nDownloading external data...")
