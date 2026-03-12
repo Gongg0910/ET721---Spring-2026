@@ -6,7 +6,6 @@ March 10, 2026
 
 from flask import Flask, render_template
 
-""" from water import static, mountain.jpg """
 
 """
 create an object 'app' from the Flask module 
@@ -26,7 +25,8 @@ def index():
 # endpoints refer to the name of the view in an app
 @app.route('/about')
 def about():
-    return '<h1>About us</h1>'
+    my_images = ["images/image_1.jpg", "images/image_2.jpg", "images/image_3.jpg"]
+    return render_template('about.html', images=my_images)
 
 @app.route('/quotes')
 def qoutes():
