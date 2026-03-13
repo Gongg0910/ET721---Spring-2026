@@ -15,7 +15,7 @@ set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"
 
 
-set _OLD_VIRTUAL_PROMPT="$prompt"
+set _OLD_VIRTUAL_PROMPT="$prompt" 
 
 if (! "$?VIRTUAL_ENV_DISABLE_PROMPT") then
     set prompt = "(virtual) $prompt"
