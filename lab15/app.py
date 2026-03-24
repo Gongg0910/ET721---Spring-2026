@@ -39,7 +39,7 @@ def get_item():
     return jsonify(items)
 
 # READ SINGLE ITEM
-@app.route('/items<item_id>', methods = ['GET'])
+@app.route('/items/<item_id>', methods = ['GET'])
 def get_oneitem(item_id):
     item = items.get(item_id)
     if not item:
@@ -47,12 +47,6 @@ def get_oneitem(item_id):
         return jsonify({'Error':"Item not found"}), 404
     
     return jsonify(item)
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
