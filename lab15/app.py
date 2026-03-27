@@ -38,7 +38,7 @@ def create_item():
 def get_item():
     return jsonify(items)
 
-# READ SINGLE ITEM
+# READ, UPDATE, DELETE SINGLE ITEM
 @app.route('/items/<item_id>', methods = ['GET', 'PUT', 'DELETE'])
 def handle_item(item_id):
     item = items.get(item_id)

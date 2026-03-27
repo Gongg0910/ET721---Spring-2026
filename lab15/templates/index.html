@@ -134,10 +134,12 @@
 
         // function to remove an item
         async function deleteitem(id){
-
-            
+            const res =  await fetch(`http://127.0.0.1:5000/items/${id}`, {
+                method :  "DELETE",
+            })
+            const html = await res.text()
+            document.body.innerHTML = html
         }
-
 
     </script>
 </body>
