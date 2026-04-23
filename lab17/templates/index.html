@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Uploader App</title>\
+    <title>Image Uploader App</title>
     <link rel="stylesheet" href="{{url_for('static', filename = 'imguploader_style.css')}}">
 </head>
 <body>
-    <h1 class="title">Upload image by Gonzalo Guerra</h1>
-    <form id="uploadform">
+    <h1 class="title">Upload image by student's full name</h1>
+    <form id="uploadForm">
         <input type="file" name="image" id="imageInput" required>
         <button type="submit" class="btnupload">Upload</button>
     </form>
@@ -17,15 +17,11 @@
 
     <h2 class="subtitle">Gallery</h2>
     <div class="gallery" id="gallery">
-        <!-- {% for image in images %} -->
         <div class="card">
             <img src="{{url_for('static', filename = 'uploads/nyc.jpg')}}">
         </div>
-               
+
     </div>
-
-
-
 
 
     <script src="{{url_for('static', filename = 'imguploader_script.js')}}"></script>
