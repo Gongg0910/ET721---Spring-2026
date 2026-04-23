@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename = 'imguploader_style.css')}}">
 </head>
 <body>
-    <h1 class="title">Upload image by student's full name</h1>
+    <h1 class="title">Upload image by Gonzalo Guerra</h1>
     <form id="uploadForm">
         <input type="file" name="image" id="imageInput" required>
         <button type="submit" class="btnupload">Upload</button>
@@ -17,9 +17,13 @@
 
     <h2 class="subtitle">Gallery</h2>
     <div class="gallery" id="gallery">
-        <div class="card">
-            <img src="{{url_for('static', filename = 'uploads/nyc.jpg')}}">
+    {% for image in images %}
+        <div class="card" id="image-{image.id}">
+            <img src="{{url_for('static', filename = 'uploads/'+image.filename)}}">
+            <button onclick="deleteImage({image.id})" class="btndelete">Delete</button>
         </div>
+    {% endfor %}
+    
 
     </div>
 
