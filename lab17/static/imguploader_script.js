@@ -11,7 +11,7 @@ document.querySelector('#uploadForm').addEventListener('submit', function(e){
         return;
     }
 
-    const formData = new formData()
+    const formData = new FormData()
     formData.append('image', fileInput.files[0])
 
     fetch('/upload',{
@@ -30,15 +30,16 @@ document.querySelector('#uploadForm').addEventListener('submit', function(e){
         }
         else{
             message.textContent = data.error || "Upload failed"
-            message.color = "red"
+            message.color = 'red'
         }
     })
 })
 
+// delete image
 function deleteImage(id){
-    if(!confirm("Are you sure you want to delete this image")){
+    if(!confirm("Are you sure you want to delete this image"))
         return;
-    }
+    
     fetch(`/delete/${id}`, {
         method : 'DELETE'
     })
