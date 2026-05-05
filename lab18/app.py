@@ -75,7 +75,7 @@ def signup():
         try:
             cursor.execute(""" INSERT INTO users (username, email, password) VALUES (?,?,?) """, (username, email, password))
             conn.commit()
-            flash("Account created successfully")
+            flash("Account created successfully!")
             return redirect(url_for('login'))
         except sqlite3.IntegrityError:
             flash('Email already exits!')
